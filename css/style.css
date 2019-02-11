@@ -1,0 +1,75 @@
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	background: #ededed;
+}
+
+.field {
+	width: 900px;
+	height: 500px;
+	margin: 30px;
+	background: linear-gradient( 90deg, #257125 50%, transparent 50%);
+  	background-size: 200px;
+  	background-color: #076b07;
+  	outline: 5px solid #ffffff; 
+    outline-offset: -20px; 
+    position: relative;
+    cursor: pointer; 
+    overflow: hidden;
+}  
+
+.goal {
+	position: absolute;
+	width: 100px;
+	height: 200px;
+	border: 5px solid #ffffff;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.goal--left {
+	left: 20px;
+	border-left: none;
+}
+
+.goal--right {
+	right: 20px;
+	border-right: none;
+}
+
+.center {
+	width: 150px;
+	height: 150px;
+	border: 5px solid #ffffff;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.center::before {
+	content: '';
+	width: 5px;
+	height: 460px;
+	background: #ffffff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);  
+}
+
+.ball {
+	width: 100px;
+	height: 100px;
+	background: #ffffff;
+	position: absolute;
+    top: 0;
+	left: 0;
+    transition: all 0.5s;
+    border-radius: 50%;
+    box-shadow: -10px -10px 45px 8px #827f7f inset;
+}
